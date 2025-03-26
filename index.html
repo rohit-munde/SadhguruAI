@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,14 @@
             --white: #FFFFFF;
             --gray: #6B7280;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        
+
         body {
             line-height: 1.5;
             color: var(--dark);
@@ -29,32 +30,32 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        
+
         .container {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-        
+
         /* Header */
         header {
             padding: 16px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: relative;
             z-index: 10;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        
+
         .logo-icon {
             width: 44px;
             height: 44px;
@@ -64,24 +65,24 @@
             justify-content: center;
             overflow: hidden;
         }
-        
+
         .logo-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .logo-text {
             font-size: 22px;
             font-weight: 700;
             color: var(--primary);
         }
-        
+
         .nav-links {
             display: flex;
             gap: 16px;
         }
-        
+
         .nav-link {
             text-decoration: none;
             color: var(--dark);
@@ -90,24 +91,24 @@
             border-radius: 8px;
             transition: all 0.2s ease;
         }
-        
+
         .nav-link:hover {
             background: rgba(139, 92, 246, 0.1);
             color: var(--primary);
         }
-        
+
         .nav-link.primary {
             background: var(--primary);
             color: white;
             font-weight: 600;
         }
-        
+
         .nav-link.primary:hover {
             background: #5b34a0;
             box-shadow: 0 4px 12px rgba(106, 62, 177, 0.3);
             transform: translateY(-1px);
         }
-        
+
         /* Main Content */
         main {
             flex: 1;
@@ -117,7 +118,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         /* Background */
         .bg-pattern {
             position: absolute;
@@ -125,12 +126,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 30%, rgba(149, 127, 239, 0.08) 0%, transparent 25%),
                 radial-gradient(circle at 80% 70%, rgba(106, 62, 177, 0.07) 0%, transparent 35%);
             z-index: 1;
         }
-        
+
         /* Content Grid */
         .content-grid {
             display: grid;
@@ -142,21 +143,21 @@
             position: relative;
             z-index: 3;
         }
-        
+
         /* Left Column - Chat */
         .chat-column {
             display: flex;
             flex-direction: column;
             padding: 20px 0;
         }
-        
+
         .chat-heading {
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 16px;
             color: var(--primary);
         }
-        
+
         .chat-subheading {
             font-size: 18px;
             color: var(--gray);
@@ -164,17 +165,17 @@
             max-width: 90%;
             line-height: 1.6;
         }
-        
+
         .chat-interface {
             flex: 1;
             background: white;
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }
-        
+
         .chat-header {
             padding: 16px 20px;
             background: #f9f7ff;
@@ -183,35 +184,35 @@
             gap: 12px;
             border-bottom: 1px solid #f0f0f0;
         }
-        
+
         .chat-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             overflow: hidden;
         }
-        
+
         .chat-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .chat-title {
             flex: 1;
         }
-        
+
         .chat-title h3 {
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 2px;
         }
-        
+
         .chat-title p {
             font-size: 13px;
             color: var(--gray);
         }
-        
+
         .chat-body {
             flex: 1;
             padding: 20px;
@@ -221,18 +222,18 @@
             gap: 20px;
             background: #fcfcfc;
         }
-        
+
         .message {
             display: flex;
             gap: 12px;
             max-width: 90%;
         }
-        
+
         .user-message {
             align-self: flex-end;
             flex-direction: row-reverse;
         }
-        
+
         .message-avatar {
             width: 36px;
             height: 36px;
@@ -240,13 +241,13 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-        
+
         .message-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .message-bubble {
             background: #f7f7f7;
             padding: 12px 16px;
@@ -254,25 +255,25 @@
             border-top-left-radius: 0;
             position: relative;
         }
-        
+
         .user-message .message-bubble {
             background: #f0f5ff;
             border-top-left-radius: 16px;
             border-top-right-radius: 0;
         }
-        
+
         .sadhguru-message .message-bubble {
             background: #f8f3ff;
             border: 1px solid #eee6ff;
         }
-        
+
         .source-links {
             margin-top: 8px;
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
-        
+
         .source-link {
             display: inline-flex;
             align-items: center;
@@ -286,22 +287,22 @@
             color: var(--primary);
             transition: all 0.2s ease;
         }
-        
+
         .source-link:hover {
             background: #f3f0ff;
             border-color: #d4c6ff;
         }
-        
+
         .source-link-icon {
             color: #ff0000;
             font-size: 14px;
         }
-        
+
         .chat-footer {
             padding: 16px 20px;
             border-top: 1px solid #f0f0f0;
         }
-        
+
         .chat-input-container {
             display: flex;
             gap: 12px;
@@ -310,7 +311,7 @@
             padding: 8px 16px;
             border: 1px solid #eaeaea;
         }
-        
+
         .chat-input {
             flex: 1;
             border: none;
@@ -319,7 +320,7 @@
             outline: none;
             font-size: 15px;
         }
-        
+
         .send-button {
             background: var(--primary);
             color: white;
@@ -333,12 +334,12 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        
+
         .send-button:hover {
             background: #5b34a0;
             transform: translateY(-1px);
         }
-        
+
         /* Right Column - Image */
         .image-column {
             display: flex;
@@ -346,7 +347,7 @@
             align-items: center;
             padding: 20px;
         }
-        
+
         .image-container {
             position: relative;
             width: 100%;
@@ -355,37 +356,37 @@
             aspect-ratio: 4/5;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
-        
+
         .sadhguru-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .image-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             padding: 50px 24px 24px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             color: white;
         }
-        
+
         .image-overlay-quote {
             font-size: 18px;
             font-style: italic;
             line-height: 1.5;
             margin-bottom: 12px;
         }
-        
+
         .image-overlay-attribution {
             font-size: 14px;
             opacity: 0.8;
         }
-        
+
         .ai-badge {
             position: absolute;
             top: 20px;
@@ -401,7 +402,7 @@
             align-items: center;
             gap: 6px;
         }
-        
+
         .ai-badge-icon {
             width: 20px;
             height: 20px;
@@ -414,7 +415,7 @@
             font-weight: bold;
             font-size: 12px;
         }
-        
+
         /* Responsive Adjustments */
         @media (max-width: 992px) {
             .content-grid {
@@ -422,45 +423,57 @@
                 height: auto;
                 gap: 40px;
             }
-            
+
             .chat-interface {
                 height: 450px;
             }
-            
+
             .image-container {
                 max-width: 400px;
                 aspect-ratio: 1/1;
             }
         }
-        
+
         @media (max-width: 576px) {
             header {
                 padding: 12px 20px;
             }
-            
+
             .logo-text {
                 font-size: 18px;
             }
-            
+
             .nav-link {
                 padding: 6px 12px;
                 font-size: 14px;
             }
-            
+
             main {
                 padding: 20px 15px;
             }
-            
+
             .chat-heading {
                 font-size: 28px;
             }
-            
+
             .chat-subheading {
                 font-size: 16px;
             }
         }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KNT45S444"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7KNT45S444');
+    </script>
+
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -486,8 +499,9 @@
                 <!-- Left Column - Chat Interface -->
                 <div class="chat-column">
                     <h1 class="chat-heading">Ask Sadhguru, Powered by AI</h1>
-                    <p class="chat-subheading">Experience the wisdom of Sadhguru through AI. Ask any spiritual question and receive answers with references to original videos.</p>
-                    
+                    <p class="chat-subheading">Experience the wisdom of Sadhguru through AI. Ask any spiritual question
+                        and receive answers with references to original videos.</p>
+
                     <div class="chat-interface">
                         <div class="chat-header">
                             <div class="chat-avatar">
@@ -498,7 +512,7 @@
                                 <p>Spiritual wisdom assistant</p>
                             </div>
                         </div>
-                        
+
                         <div class="chat-body">
                             <div class="message user-message">
                                 <div class="message-avatar">
@@ -508,14 +522,17 @@
                                     How can I find lasting joy in my life?
                                 </div>
                             </div>
-                            
+
                             <div class="message sadhguru-message">
                                 <div class="message-avatar">
                                     <img src="./assets/Logo.png" alt="Sadhguru Avatar">
                                 </div>
                                 <div class="message-bubble">
-                                    Joy is not something to be pursued. It is the natural outcome when you are in harmony with yourself. Most people are unhappy not because of what they don't have, but because they don't know how to handle what they have - their own mind, their own consciousness.
-                                    
+                                    Joy is not something to be pursued. It is the natural outcome when you are in
+                                    harmony with yourself. Most people are unhappy not because of what they don't have,
+                                    but because they don't know how to handle what they have - their own mind, their own
+                                    consciousness.
+
                                     <div class="source-links">
                                         <a href="#" class="source-link">
                                             <span class="source-link-icon">▶</span>
@@ -528,7 +545,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="message user-message">
                                 <div class="message-avatar">
                                     <img src="./assets/user.png" alt="User Avatar">
@@ -537,14 +554,17 @@
                                     How do I meditate properly?
                                 </div>
                             </div>
-                            
+
                             <div class="message sadhguru-message">
                                 <div class="message-avatar">
                                     <img src="./assets/Logo.png" alt="Sadhguru Avatar">
                                 </div>
                                 <div class="message-bubble">
-                                    Meditation is not something you do; it is something you become. It is not an act; it is a quality. Start with simply being aware of your breath. Don't try to control it - just observe it. When you focus on your breath, your mind becomes still, and in that stillness, meditation happens.
-                                    
+                                    Meditation is not something you do; it is something you become. It is not an act; it
+                                    is a quality. Start with simply being aware of your breath. Don't try to control it
+                                    - just observe it. When you focus on your breath, your mind becomes still, and in
+                                    that stillness, meditation happens.
+
                                     <div class="source-links">
                                         <a href="#" class="source-link">
                                             <span class="source-link-icon">▶</span>
@@ -558,7 +578,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="chat-footer">
                             <div class="chat-input-container">
                                 <input type="text" class="chat-input" placeholder="Ask Sadhguru a question...">
@@ -569,7 +589,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right Column - Image -->
                 <div class="image-column">
                     <div class="image-container">
@@ -579,7 +599,7 @@
                             <span>Powered by AI</span>
                         </div>
                         <div class="image-overlay">
-                 
+
                         </div>
                     </div>
                 </div>
@@ -587,4 +607,5 @@
         </main>
     </div>
 </body>
+
 </html>
